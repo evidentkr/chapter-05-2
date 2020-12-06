@@ -23,13 +23,13 @@ public class Board {
 	@GeneratedValue
 	private Long seq;
 	private String title;
-	//private String writer;
+	// private String writer;
 	private String content;
 	@Temporal(value = TemporalType.TIMESTAMP)
 	private Date createDate;
 	private Long cnt;
-	
+
 	@ManyToOne
-	@JoinColumn(name="MEMBER_ID")
+	@JoinColumn(name = "MEMBER_ID", nullable = false)
 	private Member member;
 }

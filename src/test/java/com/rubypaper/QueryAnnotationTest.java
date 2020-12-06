@@ -27,7 +27,7 @@ public class QueryAnnotationTest {
 		for (int i = 1; i <= 200; i++) {
 			Board board = new Board();
 			board.setTitle("테스트 제목 " + i);
-			board.setWriter("테스터");
+//			board.setWriter("테스터");
 			board.setContent("테스트 내용 " + i);
 			board.setCreateDate(new Date());
 			board.setCnt(0L);
@@ -69,15 +69,15 @@ public class QueryAnnotationTest {
 //	}
 	
 	//282 페이징 및 정렬 처리
-	@Test
-	public void testQueryAnnotationTest4() {
-		Pageable paging = PageRequest.of(0, 3, Sort.Direction.DESC, "seq");
-		List<Board> boardList = boardRepo.queryAnnotationTest4(paging);
-				
-		System.out.println("검색 결과");
-		for (Board board : boardList) {
-			System.out.println("---> " + board.toString());
-		}
-	}
+//	@Test
+//	public void testQueryAnnotationTest4() {
+//		Pageable paging = PageRequest.of(0, 3, Sort.Direction.DESC, "seq");
+//		List<Board> boardList = boardRepo.queryAnnotationTest4(paging);
+//				
+//		System.out.println("검색 결과");
+//		for (Board board : boardList) {
+//			System.out.println("---> " + board.toString());
+//		}
+//	}
 	
 }

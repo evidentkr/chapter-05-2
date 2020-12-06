@@ -16,7 +16,7 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@ToString
+@ToString(exclude="member")
 @Entity
 public class Board {
 	@Id
@@ -32,4 +32,9 @@ public class Board {
 	@ManyToOne
 	@JoinColumn(name = "MEMBER_ID", nullable = false)
 	private Member member;
+	
+	public void setMember(Member member) {
+		this.member = member;
+		member.getBoardList().add(this);
+	}
 }
